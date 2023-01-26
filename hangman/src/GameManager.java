@@ -5,9 +5,14 @@ public class GameManager {
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to Hangman! What is your name?");
         String name = in.nextLine();
-        System.out.println("Hello " + name + ", here's the rules...I've picked a word and you need to guess letters till you work out the word. If you know the word before 8 guesses you win else I win. Simple stuff, lets play!");
+        System.out.println("Hello " + name + ", here's the rules...I've picked a word and you've got to guess it in 8 tries. Simple stuff, lets play!");
     }
 
+public void livesRemaining () {
+        int lives = 8;
+        if (lives > 0);
+        System.out.println("You have " +  lives + " guesses remaining!");
+}
 }
 
 
