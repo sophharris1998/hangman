@@ -26,10 +26,5 @@ public class Word {
         }
         System.out.println("The word you are guessing is " + dotString);
 
-
-
-
-
-
         return dotString;
     }}

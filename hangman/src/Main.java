@@ -16,12 +16,10 @@ public class Main {
             UserInput letterManage = new UserInput();
             String usersGuess = letterManage.typeLetter();
             userGuesses += usersGuess;
-            startGame.displayWord(randomWord, userGuesses);
-            //startGame.displayWord(randomWord, userGuesses );
+            String dotString= startGame.displayWord(randomWord, userGuesses);
+            correctGuess = manageGame.continueGame(randomWord, usersGuess);
+            correctGuess = manageGame.containsFullStop(dotString);
 
-        if  (
-                
-        )
         }
 
     }

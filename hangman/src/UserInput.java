@@ -11,7 +11,7 @@ public class UserInput {
             if (
                     lengthOfLetter == false
             ) {
-                System.out.println("Please only enter one letter at a time");
+                System.out.println("Please only enter one letter at a timef");
             }
             else {
                 stopWordGuessLoop = true;

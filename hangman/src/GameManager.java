@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class GameManager {
+    public int lives = 8;
     public void welcome () {
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to Hangman! What is your name?");
@@ -9,12 +10,12 @@ public class GameManager {
     }
 
 public void livesRemaining () {
-        int lives = 8;
+
         if (lives > 0);
         System.out.println("You have " +  lives + " guesses remaining!");
 }
 
-public Boolean compareGuessToWord (String word, String letterGuessed) {
+public Boolean continueGame (String word, String letterGuessed) {
        if (
                word.contains(letterGuessed) == true
        )
@@ -22,9 +23,33 @@ public Boolean compareGuessToWord (String word, String letterGuessed) {
            return true;
        }
        else {
-           return false;
+           lives -= 1;
+           if (
+                   lives == 0
+           ) {
+               System.out.println("GAME OVER...no guesses left. The word you were trying to guess was " + word);
+               return false;
+           }
+           else {
+               System.out.println("You have " + lives + " guesses remaining");
+           }
+            return true;
        }
 }
+
+public Boolean containsFullStop (String word) {
+        if (
+                word.contains(".")
+        ){
+            return true;
+        }
+        else {
+            OutputResponse.congrats();
+            return false;
+        }
+}
+
+
 
     }
 

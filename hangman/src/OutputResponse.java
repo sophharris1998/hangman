@@ -1,5 +1,5 @@
 public class OutputResponse {
-    public void congrats () {
+    public static void congrats() {
         System.out.println("YOU WIN");
     }
 }
