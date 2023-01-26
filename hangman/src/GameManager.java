@@ -13,7 +13,20 @@ public void livesRemaining () {
         if (lives > 0);
         System.out.println("You have " +  lives + " guesses remaining!");
 }
+
+public Boolean compareGuessToWord (String word, String letterGuessed) {
+       if (
+               word.contains(letterGuessed) == true
+       )
+       {
+           return true;
+       }
+       else {
+           return false;
+       }
 }
+
+    }
 
 
 

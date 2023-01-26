@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserInput {
-    public void typeLetter () {
+    public String typeLetter () {
         boolean stopWordGuessLoop = false;
         while (stopWordGuessLoop==false) {
             Scanner in = new Scanner(System.in);
@@ -11,12 +11,14 @@ public class UserInput {
             if (
                     lengthOfLetter == false
             ) {
-                System.out.println("Please only enter one letter at a time, ");
+                System.out.println("Please only enter one letter at a time");
             }
             else {
                 stopWordGuessLoop = true;
+                return letterGuessed;
             }
         }
+        return "";
     }
 
     public static Boolean checkLetter (String letter) {

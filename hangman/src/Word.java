@@ -9,13 +9,24 @@ public class Word {
         return randomWord;
     }
 
-    public String displayWord (String randomWord) {
+    public String displayWord (String randomWord, String guessedLetters) {
         String dotString = "";
         for (int i=0; i < randomWord.length(); i++) {
-            dotString += ".";
 
+
+            if (
+                    guessedLetters.contains(Character.toString(randomWord.charAt(i)))
+            )
+            {
+                dotString += randomWord.charAt(i);
+            }
+            else {
+                dotString += ".";
+            }
         }
         System.out.println("The word you are guessing is " + dotString);
+
+
 
 
 
